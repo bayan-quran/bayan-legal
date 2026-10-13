@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bayān — Politique de confidentialité</title>
+  <style>
+    :root { color-scheme: light; --ink:#1c1916; --muted:#5c564e; --bg:#f7f3ec; --line:#ddd4c6; }
+    body { margin:0; font:17px/1.55 Georgia, "Times New Roman", serif; color:var(--ink); background:var(--bg); }
+    main { max-width:42rem; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+    h1 { font-size:1.85rem; font-weight:600; line-height:1.25; margin:0 0 .75rem; }
+    h2 { font-size:1.15rem; margin:2rem 0 .6rem; }
+    .meta, .nav { color:var(--muted); font-size:.95rem; }
+    .nav a { color:#6b4f2a; margin-right:1rem; }
+    ul { padding-left:1.2rem; }
+    a { color:#6b4f2a; }
+    code { font-size:.9em; }
+    hr { border:0; border-top:1px solid var(--line); margin:2rem 0; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="nav"><a href="../">Bayān</a> · <a href="../support/">Assistance</a> · <a href="../terms/">Conditions</a></p>
+  <h1>Politique de confidentialité</h1>
+  <p class="meta">Dernière mise à jour : 13 octobre 2026</p>
+
+  <p>Bayān est une application iOS de lecture du Coran, d’écoute, d’apprentissage et d’accompagnement (Ustadh).</p>
+
+  <h2>Responsable et contact</h2>
+  <p>Éditeur de l’application Bayān. Pour exercer vos droits ou poser une question : voir la <a href="../support/">page Assistance</a> (adresse e-mail officielle indiquée dès qu’elle est publiée).</p>
+
+  <h2>Données collectées</h2>
+  <ul>
+    <li><strong>Compte (Sign in with Apple)</strong> : identifiant Supabase, e-mail (réel ou Hide My Email), prénom fourni par Apple à la première autorisation.</li>
+    <li><strong>Progression / cloud sync</strong> : bookmarks, dernière lecture, tentatives Apprendre (LearningMemory), programmes, préférences (dont univers), statistiques liées au compte — lorsque la synchronisation cloud est active.</li>
+    <li><strong>Achats (StoreKit / Apple)</strong> : état d’abonnement Premium vérifié côté serveur. Aucune carte bancaire n’est saisie dans Bayān.</li>
+    <li><strong>Ustadh</strong> : messages et contexte d’apprentissage limité envoyés uniquement après consentement explicite, et uniquement pour les comptes Premium. Métadonnées techniques (quota, coût, succès) sans texte brut dans le registre d’usage. Historique conversationnel visible : local appareil.</li>
+    <li><strong>Restent sur l’appareil</strong> : imports audio, enregistrements micro Apprendre, photos de personnalisation, position pour horaires de prière (non envoyés à un fournisseur IA).</li>
+  </ul>
+
+  <h2>Fournisseurs</h2>
+  <ul>
+    <li><strong>Apple</strong> — AuthenticationServices, StoreKit.</li>
+    <li><strong>Supabase</strong> — Auth, Postgres, Edge Functions, synchronisation.</li>
+    <li><strong>OpenAI</strong> — traitement Ustadh cloud pour Premium après consentement. Aucune clé dans l’app. Pas de web search / file search / outils cloud payants dans Ustadh V1.</li>
+  </ul>
+  <p>Aucun SDK publicitaire. Pas de tracking ATT. Pas d’analytics tiers ni de crash reporting tiers dans la version actuelle.</p>
+
+  <h2>Consentement IA</h2>
+  <p>Avant le premier envoi à OpenAI, Bayān affiche une explication et demande Continuer / Pas maintenant. Refus : Quran, écoute et Apprendre restent disponibles ; Ustadh cloud reste indisponible. Retrait possible dans Réglages. Les utilisateurs free utilisent uniquement des capacités locales Ustadh (sans appel IA payant).</p>
+
+  <h2>Conservation et suppression</h2>
+  <p>Profil → Compte → Supprimer mon compte : suppression des données Bayān liées au compte, nettoyage local, et révocation du jeton Sign in with Apple côté serveur lorsque configuré. Cela n’annule pas un abonnement Apple (à gérer dans les Réglages Apple).</p>
+
+  <h2>Enfants</h2>
+  <p>Bayān n’est pas destiné aux enfants de moins de 13 ans (ou l’âge minimal applicable).</p>
+
+  <hr />
+  <p class="meta"><a href="../terms/">Conditions d’utilisation</a> · <a href="../support/">Assistance</a></p>
+</main>
+</body>
+</html>
