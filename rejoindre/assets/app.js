@@ -4,7 +4,7 @@ if(d.site)return; if(!d.prenom?.trim())return err.textContent='Ton prénom, s\'i
 if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email||''))return err.textContent='Cet email ne semble pas valide.';
 if(!d.consent)return err.textContent='Coche la case pour qu\'on puisse te prévenir.';
 const b=f.querySelector('button');b.disabled=true;b.textContent='…';const c=window.BAYAN_CFG||{};
-try{ if(c.SUPABASE_URL){const r=await fetch(c.SUPABASE_URL+'/rest/v1/waitlist',{method:'POST',headers:{apikey:c.SUPABASE_ANON_KEY,Authorization:'Bearer '+c.SUPABASE_ANON_KEY,'Content-Type':'application/json',Prefer:'return=minimal'},
+try{ if(c.SUPABASE_URL){const r=await fetch(c.SUPABASE_URL+'/rest/v1/waitlist',{method:'POST',headers:{apikey:c.SUPABASE_ANON_KEY,'Content-Type':'application/json',Prefer:'return=minimal'},
  body:JSON.stringify({prenom:d.prenom.trim(),email:d.email.trim().toLowerCase(),tiktok:(d.tiktok||'').replace(/^@/,'').trim()||null,consent:true,source:'tiktok_live'})});
  if(!r.ok&&r.status!==409){const t=await r.text();if(!/duplicate|23505/.test(t))throw 0;}}
  else{console.warn('Mode aperçu : aucun envoi (config vide)');}
